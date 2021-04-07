@@ -7,6 +7,7 @@ TagManager:
   - Head
   - Torso
   - Legs
+  - Bomb
   layers:
   - Default
   - TransparentFX

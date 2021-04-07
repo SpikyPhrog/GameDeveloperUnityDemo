@@ -59,13 +59,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Balance.cs" />
-     <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Bazooka.cs" />
+     <Compile Include="Assets\Scripts\BazookaAmmo.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\BazookaBuff.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\BazookaDrop.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\Bomb.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\Medkit.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\ShieldBuff.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\SpawnRandomBonuses.cs" />
+     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+     <Compile Include="Assets\Scripts\PistolAmmo.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\SpawnRandomBonuses.cs" />
-     <Compile Include="Assets\Scripts\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Shield.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
