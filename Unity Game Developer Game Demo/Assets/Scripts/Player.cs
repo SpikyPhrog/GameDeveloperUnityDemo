@@ -1,23 +1,23 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public CharacterController characterController;
     public Gun gun;
     public Bazooka bazooka;
+    
     public int maxHealth;
+    
     public GameObject[] healthBar;
     public GameObject shield;
     public GameObject gunWeapon;
     public GameObject bazookaWeapon;
+    
     public bool hasEquippedBazooka;
 
     private int _currentHealth;
-    private int _healthBarID;
-    private ShieldBuff _shieldBuff;
 
-    
+
     private void Start()
     {
         if (characterController.id == 2)
@@ -35,13 +35,19 @@ public class Player : MonoBehaviour
         }
 
         _currentHealth = maxHealth;
-        _shieldBuff = shield.GetComponent<ShieldBuff>();
         hasEquippedBazooka = false;
         UpdateHealthBar();
     }
 
     public void UpdateHealthBar()
     {
+        //Reset the healthBar
+        foreach (GameObject health in healthBar)
+        {
+            health.SetActive(false);    
+        }
+        
+        //Refill the healthBar
         for (int i = 0; i < _currentHealth; i++)
         {
             healthBar[i].SetActive(true);
@@ -52,12 +58,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(int amountDamage)
     {
         _currentHealth -= amountDamage;
-        _healthBarID += amountDamage;
 
-        for (int i = 0; i < _healthBarID; i++)
-        {
-            healthBar[i].SetActive(false);
-        }
+        UpdateHealthBar();
     }
 
     public void HealPlayer(int amountHeal)
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
         _currentHealth += amountHeal;
         
         if (_currentHealth > 5) _currentHealth = 5;
-   
+        UpdateHealthBar();
     }
 
     public void SpawnShield()
