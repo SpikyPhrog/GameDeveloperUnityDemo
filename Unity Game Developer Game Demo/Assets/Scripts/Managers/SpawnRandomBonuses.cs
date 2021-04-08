@@ -1,32 +1,44 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class SpawnRandomBonuses : MonoBehaviour
 {
     public GameObject[] bonuses;
-
-    private float _lastTimeDropped;
-    private float _firstInterval;
+    
+    private float _dropDuration;
+    private float _waitDuration;
     private void Start()
     {
-        
-        StartCoroutine(nameof(DropRandomBonus));
+        _dropDuration = 5f;
+        _waitDuration = 7f;
     }
 
-    IEnumerator DropRandomBonus()
+    private void Update()
     {
-        while (true)
+        if (_waitDuration <= 0)
         {
-            _firstInterval = Random.Range(0f, 5f);
+            _dropDuration = 5f;
+            _waitDuration = 7f;
             SpawnDrop(bonuses);
-            _lastTimeDropped += _firstInterval;
-            yield return new WaitForSeconds(_lastTimeDropped);
         }
+        else
+        {
+            _dropDuration -= Time.deltaTime;
+            _waitDuration -= Time.deltaTime;
+        }
+
+        if (MasterSingleton.Instance.UIManager.itemDuration != null)
+        {
+            MasterSingleton.Instance.UIManager.itemDuration.text = ((int) _dropDuration).ToString();
+        }
+
     }
 
     void SpawnDrop(GameObject[] drops)
     {
-        Instantiate(drops[Random.Range(0, drops.Length)], transform);
+        MasterSingleton.Instance.SoundManager.PlaySound(SoundEvents.DropSpawn);
+        GameObject drop = Instantiate(drops[Random.Range(0, drops.Length)], transform);
+        MasterSingleton.Instance.UIManager.itemDuration = drop.GetComponent<DisplayDuration>().duration;
+        Destroy(drop, _dropDuration); 
     }
 }

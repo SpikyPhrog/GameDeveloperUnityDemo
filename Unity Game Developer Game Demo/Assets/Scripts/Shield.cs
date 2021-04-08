@@ -10,11 +10,11 @@ public class Shield : MonoBehaviour
         {
             if (other.collider.transform.rotation.y == 0 )
             {
-                GameManager.Instance.player1.SpawnShield();
+                MasterSingleton.Instance.GameManager.player1.SpawnShield();
             }
             else if (other.collider.transform.rotation.y > 0)
             {
-                GameManager.Instance.player2.SpawnShield();
+                MasterSingleton.Instance.GameManager.player2.SpawnShield();
             }
             
             Destroy(gameObject);

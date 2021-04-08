@@ -11,11 +11,11 @@ public class BazookaDrop : MonoBehaviour
         {
             if (other.collider.transform.rotation.y == 0 )
             {
-                GameManager.Instance.player1.EquipBazooka();
+                MasterSingleton.Instance.GameManager.player1.EquipBazooka();
             }
             else if (other.collider.transform.rotation.y > 0)
             {
-                GameManager.Instance.player2.EquipBazooka();
+                MasterSingleton.Instance.GameManager.player2.EquipBazooka();
             }
             
             Destroy(gameObject);

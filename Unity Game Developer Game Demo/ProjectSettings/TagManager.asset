@@ -8,6 +8,8 @@ TagManager:
   - Torso
   - Legs
   - Bomb
+  - UpperLegs
+  - Knees
   layers:
   - Default
   - TransparentFX

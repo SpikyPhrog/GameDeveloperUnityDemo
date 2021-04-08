@@ -17,11 +17,11 @@ public class Medkit : MonoBehaviour
         {
             if (other.collider.transform.rotation.y == 0 )
             {
-                GameManager.Instance.player1.HealPlayer(3);
+                MasterSingleton.Instance.GameManager.player1.HealPlayer(3);
             }
             else if (other.collider.transform.rotation.y > 0)
             {
-                GameManager.Instance.player2.HealPlayer(3);
+                MasterSingleton.Instance.GameManager.player2.HealPlayer(3);
             }
             Destroy(gameObject);
         }

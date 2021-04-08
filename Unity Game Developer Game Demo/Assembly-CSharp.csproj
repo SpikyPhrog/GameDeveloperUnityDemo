@@ -67,10 +67,13 @@
      <Compile Include="Assets\Scripts\Collectibles\Bomb.cs" />
      <Compile Include="Assets\Scripts\Collectibles\Medkit.cs" />
      <Compile Include="Assets\Scripts\Collectibles\ShieldBuff.cs" />
+     <Compile Include="Assets\Scripts\DisplayDuration.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SpawnRandomBonuses.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+     <Compile Include="Assets\Scripts\MasterSingleton.cs" />
      <Compile Include="Assets\Scripts\PistolAmmo.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />

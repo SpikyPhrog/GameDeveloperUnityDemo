@@ -15,7 +15,7 @@ public class BazookaBuff : MonoBehaviour
     private void Awake()
     {
         _duration = 5f;
-        _gameManager = GameManager.Instance;
+        _gameManager = MasterSingleton.Instance.GameManager;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -35,7 +35,7 @@ public class BazookaBuff : MonoBehaviour
 
         _duration -= Time.deltaTime;
 
-        // reset the shield's duration
+        // reset the buff's duration
         if (!_hasBuff)
         {
             _duration = 5f;

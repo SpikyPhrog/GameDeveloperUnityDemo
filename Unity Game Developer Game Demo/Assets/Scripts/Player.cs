@@ -12,11 +12,14 @@ public class Player : MonoBehaviour
     public GameObject shield;
     public GameObject gunWeapon;
     public GameObject bazookaWeapon;
+    public GameObject winnerUI;
     
     public bool hasEquippedBazooka;
+    
 
     private int _currentHealth;
-
+    private ShieldBuff _shieldBuff;
+    private BazookaBuff _bazookaBuff;
 
     private void Start()
     {
@@ -39,7 +42,7 @@ public class Player : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void UpdateHealthBar()
+    void UpdateHealthBar()
     {
         //Reset the healthBar
         foreach (GameObject health in healthBar)
@@ -81,5 +84,10 @@ public class Player : MonoBehaviour
         
         gunWeapon.SetActive(false);
         bazookaWeapon.SetActive(true);
+    }
+
+    public int GetCurrentPlayerHealth()
+    {
+        return _currentHealth;
     }
 }
