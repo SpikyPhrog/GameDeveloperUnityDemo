@@ -58,25 +58,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Balance.cs" />
-     <Compile Include="Assets\Scripts\Bazooka.cs" />
-     <Compile Include="Assets\Scripts\BazookaAmmo.cs" />
-     <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\Bazooka.cs" />
      <Compile Include="Assets\Scripts\Collectibles\BazookaBuff.cs" />
      <Compile Include="Assets\Scripts\Collectibles\BazookaDrop.cs" />
      <Compile Include="Assets\Scripts\Collectibles\Bomb.cs" />
      <Compile Include="Assets\Scripts\Collectibles\Medkit.cs" />
+     <Compile Include="Assets\Scripts\Collectibles\Shield.cs" />
      <Compile Include="Assets\Scripts\Collectibles\ShieldBuff.cs" />
-     <Compile Include="Assets\Scripts\DisplayDuration.cs" />
-     <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MasterSingleton.cs" />
      <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SpawnRandomBonuses.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
-     <Compile Include="Assets\Scripts\MasterSingleton.cs" />
-     <Compile Include="Assets\Scripts\PistolAmmo.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Shield.cs" />
+     <Compile Include="Assets\Scripts\Player\Balance.cs" />
+     <Compile Include="Assets\Scripts\Player\BazookaAmmo.cs" />
+     <Compile Include="Assets\Scripts\Player\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Player\Gun.cs" />
+     <Compile Include="Assets\Scripts\Player\PistolAmmo.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\UI\DisplayDuration.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\ResponsiveBackground.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
